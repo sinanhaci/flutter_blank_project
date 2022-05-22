@@ -21,6 +21,7 @@ dependencies:
   sizer: ^2.0.15
   google_fonts: 2.1.0
   line_awesome_flutter: ^2.0.0
+  cached_network_image: ^3.2.0
 
 
   cupertino_icons: ^1.0.2

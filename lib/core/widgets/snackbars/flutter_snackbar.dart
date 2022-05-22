@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../future/project_widgets/constant_widgets.dart';
+import '../../../main.dart';
+import '../constant_widgets.dart';
 import '../font/font.dart';
-import '/main.dart';
+
 
 flutterSnackBar(
     {required String content,

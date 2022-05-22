@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/core/constants/base_item_colors.dart';
+import '../../../../constants/base_item_colors.dart';
 
 class CustomMaterialSwitch extends BaseItemColors{
   materialSwitch({required bool value,required Function(bool) onChanged}) {

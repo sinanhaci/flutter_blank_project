@@ -7,7 +7,7 @@ class CustomSnackBar {
   static snackbarGetX({
     required String title,
     required String content,
-    Color backgroundColor = ProjectColor.red,
+    Color backgroundColor = ProjectColor.colorRed,
     Color textAndIconColor = ProjectColor.colorsWhite,
     Function? onTap,
     required IconData icon,

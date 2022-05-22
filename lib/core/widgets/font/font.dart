@@ -1,3 +1,5 @@
+import 'package:google_fonts/google_fonts.dart';
+
 import '/core/constants/font_constants/font_size_constant.dart';
 import '/core/constants/font_constants/font_type_constant.dart';
 import 'package:flutter/material.dart';
@@ -140,6 +142,32 @@ class TextStyleBase {
     return FontTypeBaseConstant.fontBaseNormal(
       color,
       TextFontSizeConstants.fontSize_16,
+    );
+  }
+    static TextStyle boldFont18(Color color) {
+    return FontTypeBaseConstant.fontBaseBold(
+      color,
+      TextFontSizeConstants.fontSize_18,
+    );
+  }
+
+  static TextStyle normalFont18(Color color) {
+    return FontTypeBaseConstant.fontBaseNormal(
+      color,
+      TextFontSizeConstants.fontSize_18,
+    );
+  }
+    static TextStyle boldFont20(Color color) {
+    return FontTypeBaseConstant.fontBaseBold(
+      color,
+      TextFontSizeConstants.fontSize_20,
+    );
+  }
+
+  static TextStyle normalFont20(Color color) {
+    return FontTypeBaseConstant.fontBaseNormal(
+      color,
+      TextFontSizeConstants.fontSize_20,
     );
   }
 

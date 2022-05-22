@@ -1,4 +1,4 @@
-import '/core/constants/base_item_colors.dart';
+import '../../../../constants/base_item_colors.dart';
 import '/core/widgets/font/font.dart';
 import 'package:flutter/cupertino.dart';
 

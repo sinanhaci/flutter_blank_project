@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../future/project_widgets/constant_widgets.dart';
+import '../constant_widgets.dart';
 
 getXSnackBar({
   required String title,

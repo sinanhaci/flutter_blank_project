@@ -5,7 +5,8 @@ import 'material_datetime_pickers/material_datetime_pickers.dart';
 class AdaptiveDateTimePickers {
   final MaterialDateTimePickers _androidDateTimePickers =
       MaterialDateTimePickers();
-  final CupertinoDateTimePickers _iosDateTimePickers = CupertinoDateTimePickers();
+  final CupertinoDateTimePickers _iosDateTimePickers =
+      CupertinoDateTimePickers();
 
   Future<DateTime> adaptiveTimePicker() {
     return Platform.isAndroid
@@ -13,10 +14,24 @@ class AdaptiveDateTimePickers {
         : _iosDateTimePickers.cupertinoTimePicker();
   }
 
-  Future<DateTime> adaptiveDatePicker() {
+  Future<DateTime> adaptiveDatePicker(
+      {int? maximumYear,
+      int? minimumYear,
+      DateTime? initialDateTime,
+      DateTime? maximumDateTime,
+      DateTime? minimumDateTime}) {
     return Platform.isAndroid
-        ? _androidDateTimePickers.materialDatePicker()
-        : _iosDateTimePickers.cupertinoDatePicker();
+        ? _androidDateTimePickers.materialDatePicker(
+            initialDateTime: initialDateTime,
+            maximumDateTime: maximumDateTime,
+            maximumYear: maximumYear,
+            minimumYear: minimumYear,
+            minimumDateTime: minimumDateTime)
+        : _iosDateTimePickers.cupertinoDatePicker(
+            initialDateTime: initialDateTime,
+            maximumYear: maximumYear,
+            minimumYear: minimumYear,
+            );
   }
 
   Future<DateTime> adaptiveDateTimePicker() {
@@ -24,6 +39,4 @@ class AdaptiveDateTimePickers {
         ? _androidDateTimePickers.materialDateTimePicker()
         : _iosDateTimePickers.cupertinoDateTimePicker();
   }
-
-  
 }

@@ -23,6 +23,10 @@ class TextFontSizeConstants {
       ScreenResolution().setItemHeight(14.sp, 14.sp, 11.5.sp);
   static double fontSize_16 =
       ScreenResolution().setItemHeight(16.sp, 16.sp, 13.sp);
+  static double fontSize_18 =
+      ScreenResolution().setItemHeight(18.sp, 18.sp, 15.sp);
+  static double fontSize_20 =
+      ScreenResolution().setItemHeight(20.sp, 20.sp, 17.sp);
 
 
 

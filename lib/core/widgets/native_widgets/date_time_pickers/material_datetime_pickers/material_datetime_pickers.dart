@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '/main.dart';
 
 class MaterialDateTimePickers {
+  static const String maximumDateTimeString = '2050-01-01 00:00:00.000';
+  static const String minimumDateTimeString = '1950-01-01 00:00:00.000';
+
   Future<DateTime> materialTimePicker() async {
     DateTime time = DateTime.now();
     await showTimePicker(
@@ -23,13 +26,13 @@ class MaterialDateTimePickers {
     return time;
   }
 
-  Future<DateTime> materialDatePicker() async {
+  Future<DateTime> materialDatePicker({int? maximumYear,int? minimumYear,DateTime? initialDateTime,DateTime? maximumDateTime,DateTime? minimumDateTime}) async {
     DateTime time = DateTime.now();
     await showDatePicker(
       context: navigatorKey.currentContext!,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(2020, 1, 1),
-      lastDate: DateTime.now().add(const Duration(days: 356)),
+      initialDate: initialDateTime ?? time,
+      firstDate: minimumDateTime ?? DateTime.parse(minimumDateTimeString),
+      lastDate: maximumDateTime ?? DateTime.parse(maximumDateTimeString),
       initialDatePickerMode: DatePickerMode.day,
     ).then((value) {
       if (value != null) {
